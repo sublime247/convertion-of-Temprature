@@ -1,0 +1,7 @@
+body{
+    background-color: blue;
+}
+.container{
+    max-width: 500px;
+    width: 90%;
+}
