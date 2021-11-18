@@ -6,8 +6,8 @@ const Cel=document.querySelector('.celc')
 
 
 const calFtoC=(enterFarh)=>{
-   let formula = (enterFarh-32)*5/9
-     celc.value=formula
+   let formula = (enterFarh-32)*5/9;
+         celc.value=formula
 }
 
 const calCtoF=(enterCelc)=>{
@@ -20,7 +20,8 @@ Cel.addEventListener('keyup', e=>{
     const enterCelc=Cel.add.value.trim()
     if(enterCelc.length){
         calCtoF(enterCelc)
-        // Cel.reset()
+    }else if(!enterCelc.length){
+        farh.reset()
     }
 })
 
@@ -29,9 +30,9 @@ farh.addEventListener('keyup', (e)=>{
     e.preventDefault()
     const enterFarh=farh.Fahrenheit.value.trim()
     if(enterFarh.length){
-        calFtoC(enterFarh)
-        // farh.reset()
-        
+        calFtoC(enterFarh) 
+    }else if(!enterFarh.length){
+        Cel.reset()
     }
 });
 
