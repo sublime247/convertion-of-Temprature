@@ -15,22 +15,22 @@ const calCtoF=(enterCelc)=>{
     F.value=formula
 }
 
-Cel.addEventListener('submit', e=>{
+Cel.addEventListener('keyup', e=>{
     e.preventDefault()
     const enterCelc=Cel.add.value.trim()
     if(enterCelc.length){
         calCtoF(enterCelc)
-        Cel.reset()
+        // Cel.reset()
     }
 })
 
 
-farh.addEventListener('submit', (e)=>{
+farh.addEventListener('keyup', (e)=>{
     e.preventDefault()
     const enterFarh=farh.Fahrenheit.value.trim()
     if(enterFarh.length){
         calFtoC(enterFarh)
-        farh.reset()
+        // farh.reset()
         
     }
 });
